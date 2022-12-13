@@ -1,21 +1,24 @@
-function cubo10 () {
-    for(let i = 1; i <= 10; i++) {
-        console.log(i ** 3) 
+function cubo10() {
+    let str = '';
+    for (let i = 1; i <= 10; i++) {
+        str += (i ** 3) + '\n';
     }
+    return str;
 }
 
-cubo10()
+console.log(cubo10());
 // ----------------------------------- //
-
 function divisiveisPor(limite, divisor) {
+    let str = ''
     for (let i = 1; i <= limite; i++) {
         if(i % divisor === 0) {
-            console.log(i)
+            str += i + '\n'
         }
     }
+    return str
 }
 
-divisiveisPor(100, 10) 
+console.log(divisiveisPor(100, 10))
 
 // ----------------------------------- //
 
@@ -26,7 +29,7 @@ function posicaoLetra(palavra, numero) {
     return console.log("Letra não encontrada");
 }
 
-posicaoLetra("algorítmos", 7) 
+console.log(posicaoLetra("algorítmos", 7)); 
 
 // ----------------------------------- //
 let palavraNova = ''
@@ -60,7 +63,7 @@ function contaVogais (palavra) {
     }
     return vowelCount
 }
-contaVogais('abacaxi')
+console.log(contaVogais('abacaxi')); 
 
 // ----------------------------------- //
 
@@ -71,9 +74,21 @@ function textoDeTrasParaFrente (texto) {
     }
     return reverse;
 }
-textoDeTrasParaFrente('abacaxi')
-
+console.log(textoDeTrasParaFrente('abacaxi')); 
+ 
 // ----------------------------------- //
+let str = '';
+function removeEspacos(texto){
+    for(let i = 0; i < texto.length; i++) {
+        if (texto[i] !== ' ') {
+            str += texto[i]
+        }  
+    }
+    return str
+}
+console.log(removeEspacos("Não restará   espaços em branco"));
+
+//-------------------------------------//
 
 function textoCriptografado(texto) {
     let word = '';
